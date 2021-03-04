@@ -33,11 +33,13 @@
             "@phan",
             "@cs"
         ],
+        "Buscador": "php Buscador_cursos.php",
         "post-update-cmd": [
             "@check"
         ]
     },
     "scripts-descriptions": {
         "check": "Roda as verificações do código com php Phan e CodeSniffer (cs)"
-    }
+    },
+    "license": "GPL-3.0"
 }
