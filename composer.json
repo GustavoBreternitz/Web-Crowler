@@ -1,0 +1,43 @@
+{
+    "name": "gbreternitz/buscador_cursos",
+    "description": "Essa biblioteca busca cursos no site da alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Gustavo Breternitz",
+            "email": "breternitzgustavo@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.4",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^5.2"
+    },
+
+    "autoload" : {
+        "psr-4" : {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "^4.0"
+    },
+
+    "scripts": {
+        "phan": "phan --allow-polyfill-parser",
+        "cs": "phpcs --standard=PSR12 src/",
+        "update": "composer update",
+        "check": [
+            "@phan",
+            "@cs"
+        ],
+        "post-update-cmd": [
+            "@check"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código com php Phan e CodeSniffer (cs)"
+    }
+}
